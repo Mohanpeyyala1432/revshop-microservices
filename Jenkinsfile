@@ -2,8 +2,7 @@ pipeline {
     agent any
 
     environment {
-        // Define SonarQube scanner home
-        SCANNER_HOME = tool 'SonarScanner'
+        // Define any environment variables here
     }
 
     stages {
