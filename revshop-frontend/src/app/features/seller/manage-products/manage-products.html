@@ -1,0 +1,124 @@
+<div class="product-container">
+
+  <h2>Manage Products</h2>
+
+  <div class="form-section" #productFormSection [class.edit-active]="editMode">
+
+    <input placeholder="Product Name"
+           [(ngModel)]="productForm.productName" />
+
+    <input placeholder="Description"
+           [(ngModel)]="productForm.description" />
+
+    <input type="number"
+           placeholder="Price"
+           [(ngModel)]="productForm.price" />
+
+    <input type="number"
+           placeholder="MRP"
+           [(ngModel)]="productForm.mrp" />
+
+    <input type="number"
+           placeholder="Discount %"
+           [(ngModel)]="productForm.discount" />
+
+    <input type="number"
+           placeholder="Quantity"
+           [(ngModel)]="productForm.quantity" />
+
+    <input type="number"
+           placeholder="Low Stock Threshold"
+           [(ngModel)]="productForm.lowStockThreshold" />
+
+    <select [(ngModel)]="productForm.categoryId">
+      <option value="">Select Category</option>
+      <option *ngFor="let cat of categories"
+              [value]="cat.categoryId">
+        {{cat.categoryName}}
+      </option>
+    </select>
+
+    <!-- Image Upload -->
+    <input type="file"
+           (change)="onFileSelected($event)" />
+
+    
+
+    <label>
+      <input type="checkbox"
+             [(ngModel)]="productForm.isActive" />
+      Active
+    </label>
+
+    <button class="primary-btn"
+            (click)="saveProduct()">
+      {{ editMode ? 'Update Product' : 'Add Product' }}
+    </button>
+
+  </div>
+
+  <div class="products-grid">
+
+  <div class="product-card" *ngFor="let p of products">
+
+    <!-- Product Image -->
+    <div class="image-container">
+      <img 
+        *ngIf="p.imageName"
+        [src]="'/uploads/' + p.imageName"
+      />
+
+      <img 
+        *ngIf="!p.imageName"
+        src="https://via.placeholder.com/300x300?text=No+Image"
+      />
+
+      <!-- Low Stock Badge -->
+      <span 
+        *ngIf="p.quantity <= p.lowStockThreshold"
+        class="low-stock-badge">
+        Low Stock
+      </span>
+    </div>
+
+    <!-- Product Info -->
+    <div class="product-info">
+
+      <h3>{{ p.productName }}</h3>
+
+      <p class="category">
+        {{ p.category?.categoryName }}
+      </p>
+
+      <div class="price-section">
+        <span class="price">₹{{ p.price }}</span>
+        <span class="mrp">₹{{ p.mrp }}</span>
+        <span class="discount">
+          {{ p.discount }}% off
+        </span>
+      </div>
+
+      <p class="stock">
+        Stock: {{ p.quantity }}
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="card-actions">
+        <button class="edit-btn"
+                (click)="editProduct(p)">
+          Edit
+        </button>
+
+        <button class="delete-btn"
+                (click)="deleteProduct(p.productId)">
+          Delete
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+</div>

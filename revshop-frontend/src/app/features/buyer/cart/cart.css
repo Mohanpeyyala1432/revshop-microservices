@@ -1,0 +1,208 @@
+.cart-container {
+  padding: 40px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.cart-item {
+  display: flex;
+  gap: 25px;
+  background: #f4f6fb;
+  padding: 25px;
+  border-radius: 16px;
+  margin-bottom: 25px;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+/* IMAGE */
+.image-section {
+  width: 110px;
+  height: 110px;
+  background: white;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-section img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+}
+
+/* INFO */
+.info-section {
+  flex: 1;
+}
+
+.info-section h4 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.info-section p {
+  margin: 6px 0;
+}
+
+.subtotal {
+  font-weight: 600;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* TOTAL SECTION */
+.cart-summary {
+  text-align: right;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+}
+
+.cart-summary h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  padding: 12px 30px;
+  background: #3aa76d;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.checkout-btn:hover {
+  background: #2f8a58;
+}
+
+.action-buttons {
+  margin-top: 15px;
+  display: flex;
+  gap: 10px;
+}
+
+.cart-summary {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  text-align: right;
+}
+
+.cart-summary h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  padding: 12px 28px;
+  background: #3aa76d;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+/* Quantity Controls */
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.qty-controls button {
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: #4c4cd6;
+  color: white;
+  font-size: 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.qty-controls span {
+  min-width: 25px;
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Action Buttons */
+.action-buttons {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.update-btn {
+  background: #4c4cd6;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.delete-btn {
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.buy-btn {
+  background: #3aa76d;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* Hover Effects */
+.update-btn:hover {
+  background: #3a3ab8;
+}
+
+.delete-btn:hover {
+  background: #e60000;
+}
+
+.buy-btn:hover {
+  background: #2f8a58;
+}
+
+.price-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 6px 0;
+}
+
+.mrp {
+  text-decoration: line-through;
+  color: gray;
+}
+
+.price {
+  font-weight: 600;
+  font-size: 18px;
+  color: #4c4cd6;
+}
+
+.discount {
+  background: #d4f3df;
+  color: #2e8b57;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 500;
+}

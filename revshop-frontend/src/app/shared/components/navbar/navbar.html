@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg px-4 custom-navbar">
+
+  
+  <a class="navbar-brand fw-bold text-white">
+    RevShop
+  </a>
+
+  
+  <button class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarContent">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarContent">
+
+   
+    <div class="mx-auto w-50 d-flex">
+      <input class="form-control me-2"
+             type="search"
+             placeholder="Search products...">
+      <button type="button" class="btn btn-warning">
+        Search
+      </button>
+    </div>
+
+    <ul class="navbar-nav ms-auto align-items-center">
+
+      <li class="nav-item">
+        <a class="nav-link text-white"
+   routerLink="/buyer"
+   routerLinkActive="active"
+   [routerLinkActiveOptions]="{ exact: true }">
+  Home
+</a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white" routerLink="/buyer/cart">
+          🛒 Cart
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a class="nav-link text-white" (click)="logout()">
+          Logout
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</nav>

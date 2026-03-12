@@ -1,0 +1,59 @@
+<div class="stats">
+
+  <div class="card products-card">
+    <h3>Total Products</h3>
+    <h2>{{ totalProducts }}</h2>
+  </div>
+
+  <div class="card lowstock-card">
+    <h3>Low Stock</h3>
+    <h2>{{ lowStockCount }}</h2>
+  </div>
+
+  <div class="card orders-card">
+    <h3>Total Orders</h3>
+    <h2>{{ totalOrders }}</h2>
+  </div>
+
+  <div class="card notifications-card" (click)="toggleNotifications()">
+    <h3>Notifications</h3>
+    <h2>{{ unreadCount }}</h2>
+  </div>
+
+  <!-- Notification Dropdown -->
+  <div *ngIf="showNotifications" class="notification-dropdown">
+    <div class="notification-header">
+      <h3>Notifications</h3>
+      <button (click)="toggleNotifications()">✕</button>
+    </div>
+    <div *ngIf="notifications.length === 0" class="no-notifications">
+      No notifications
+    </div>
+    <div *ngFor="let notification of notifications" class="notification-item" [class.unread]="!notification.readStatus" (click)="markAsRead(notification.id)">
+      <p>{{ notification.message }}</p>
+      <small>{{ notification.createdAt | date:'short' }}</small>
+    </div>
+  </div>
+
+  <div class="low-stock-section" *ngIf="lowStockProducts.length > 0">
+
+  <div class="alert-header">
+     Low Stock Alerts
+  </div>
+
+  <div class="low-stock-card" *ngFor="let p of lowStockProducts">
+
+    <div class="alert-icon">⚠</div>
+
+    <div class="alert-content">
+      <h4>{{ p.productName }}</h4>
+      <p>
+        Only <span class="qty">{{ p.quantity }}</span> left in stock
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+</div>

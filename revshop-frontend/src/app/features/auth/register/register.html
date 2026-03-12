@@ -1,0 +1,124 @@
+<div class="register-wrapper">
+
+  <div class="container">
+   <div class="card form-card mx-auto shadow-lg p-4">
+
+      <h3 class="text-center mb-4">Create Account</h3>
+
+      <form (ngSubmit)="register()">
+
+        <!-- Name -->
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Full Name"
+                 [(ngModel)]="user.name"
+                 name="name"
+                 required>
+        </div>
+
+        <!-- Email -->
+        <div class="mb-3">
+          <input type="email"
+                 class="form-control"
+                 placeholder="Email"
+                 [(ngModel)]="user.email"
+                 name="email"
+                 required>
+        </div>
+
+       <div class="password-container mb-3">
+  <input
+    [type]="hidePassword ? 'password' : 'text'"
+    class="form-control"
+    placeholder="Password"
+    [(ngModel)]="user.password"
+    name="password"
+    required>
+
+  <i class="bi"
+     [ngClass]="hidePassword ? 'bi-eye-slash' : 'bi-eye'"
+     (click)="hidePassword = !hidePassword">
+  </i>
+</div>
+
+        <!-- Phone -->
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Phone Number"
+                 [(ngModel)]="user.phone"
+                 name="phone"
+                 required>
+        </div>
+
+        <!-- Role -->
+        <div class="mb-3">
+          <select class="form-control"
+                  [(ngModel)]="user.role"
+                  name="role"
+                  required>
+            <option value="">Select Role</option>
+            <option value="BUYER">Buyer</option>
+            <option value="SELLER">Seller</option>
+          </select>
+        </div>
+
+        <!-- Business Name -->
+        <div class="mb-3" *ngIf="user.role === 'SELLER'">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Business Name"
+                 [(ngModel)]="user.businessName"
+                 name="businessName">
+        </div>
+
+        <hr>
+        <h5>Address Details</h5>
+
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Street"
+                 [(ngModel)]="user.street"
+                 name="street"
+                 required>
+        </div>
+
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="City"
+                 [(ngModel)]="user.city"
+                 name="city"
+                 required>
+        </div>
+
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="State"
+                 [(ngModel)]="user.state"
+                 name="state"
+                 required>
+        </div>
+
+        <div class="mb-3">
+          <input type="text"
+                 class="form-control"
+                 placeholder="Pincode"
+                 [(ngModel)]="user.pincode"
+                 name="pincode"
+                 required>
+        </div>
+
+        <button type="submit" class="btn btn-success w-100">
+          Register
+        </button>
+
+      </form>
+
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,18 @@
+<div class="layout">
+
+  <div class="sidebar">
+    <h2>My Page</h2>
+
+    <a [routerLink]="['/seller/dashboard']">Dashboard</a>
+    <a [routerLink]="['/seller/categories']">Categories</a>
+    <a [routerLink]="['/seller/manage-products']">Products</a>
+    <a [routerLink]="['/seller/orders']">Orders</a>
+
+    <button class="logout-btn" (click)="logout()">Logout</button>
+  </div>
+
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+
+</div>

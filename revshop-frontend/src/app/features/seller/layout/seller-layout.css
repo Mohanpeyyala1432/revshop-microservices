@@ -1,0 +1,95 @@
+.layout {
+  display: flex;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sidebar {
+  width: 240px;
+  background: linear-gradient(180deg, #0f172a, #1e293b);
+  color: white;
+  padding: 25px 20px;
+  min-height: 100vh;
+  box-shadow: 4px 0 15px rgba(0,0,0,0.1);
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.sidebar h2 {
+  margin-bottom: 40px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  color: #e2e8f0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  background: #334155;
+  transform: translateX(5px);
+  color: #38bdf8;
+}
+
+.content {
+  flex: 1;
+  padding: 40px;
+  background: #f8fafc;
+}
+
+.content {
+  margin-left: 250px; 
+  padding: 20px;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;   
+  width: 250px;    
+  overflow-y: auto; 
+}
+
+.sidebar a {
+  display: block;
+  padding: 12px 16px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.active-link {
+  background-color: rgba(255,255,255,0.2);
+  border-left: 4px solid #409eff;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #ef4444;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background: #dc2626;
+}

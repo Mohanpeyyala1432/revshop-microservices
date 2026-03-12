@@ -1,0 +1,108 @@
+<div *ngIf="product" class="detail-wrapper">
+
+  <div class="image-box">
+    <img
+      *ngIf="product.imageName"
+      [src]="'/uploads/' + product.imageName"
+      alt="Product Image"
+    />
+  </div>
+
+  <div class="info-box">
+
+  <h1 class="title">{{ product.productName }}</h1>
+
+  <div class="price-row">
+    <span class="mrp">₹ {{ product.mrp }}</span>
+    <span class="price">₹ {{ product.price }}</span>
+    <span class="discount">{{ product.discount }}% OFF</span>
+  </div>
+
+  <p class="desc">{{ product.description }}</p>
+
+  <div class="review-section" *ngIf="totalReviews > 0">
+
+  <h3>Customer Reviews</h3>
+
+  
+  <div class="avg-rating">
+
+    <span class="stars">
+      <ng-container *ngFor="let star of [1,2,3,4,5]">
+        <span [class.filled]="star <= averageRating">
+          ★
+        </span>
+      </ng-container>
+    </span>
+
+    <span class="avg-number">
+      {{ averageRating }} out of 5
+    </span>
+
+    <span class="count">
+      ({{ totalReviews }} reviews)
+    </span>
+
+  </div>
+
+  
+  <div class="review-card" *ngFor="let review of reviews">
+
+    <div class="review-header">
+      <strong>{{ review.userName }}</strong>
+    </div>
+
+    <div class="stars small">
+      <ng-container *ngFor="let star of [1,2,3,4,5]">
+        <span [class.filled]="star <= review.rating">
+          ★
+        </span>
+      </ng-container>
+    </div>
+
+    <p class="comment">
+      {{ review.comment }}
+    </p>
+
+    <span class="date">
+      {{ review.createdAt | date:'mediumDate' }}
+    </span>
+
+  </div>
+
+</div>
+
+<div *ngIf="totalReviews === 0" class="no-reviews">
+  No reviews yet
+</div>
+
+  <div class="stock"
+       [ngClass]="{
+         'in-stock': product.quantity > 0,
+         'out-stock': product.quantity === 0
+       }">
+    {{ product.quantity > 0 ? '✔ In Stock' : '✖ Out of Stock' }}
+  </div>
+
+  
+  <div class="qty-wrapper">
+    <label>Quantity</label>
+    <div class="qty-box">
+      <button (click)="decreaseQty()">−</button>
+      <span>{{ selectedQty }}</span>
+      <button (click)="increaseQty()">+</button>
+    </div>
+  </div>
+
+ 
+  <div class="button-row">
+    <button class="cart-btn" (click)="addToCart()">
+      Add to Cart
+    </button>
+
+    <button class="buy-btn" (click)="buyNow()">
+      Buy Now
+    </button>
+  </div>
+
+</div>

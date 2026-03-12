@@ -1,0 +1,27 @@
+/* RevShop Custom Navbar */
+.custom-navbar {
+background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
+}
+
+.custom-navbar .navbar-brand {
+  color: #ffffff !important;
+  font-size: 22px;
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff !important;
+  font-weight: 500;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+.custom-navbar .btn-warning {
+  background-color: #ff6b6b;
+  border: none;
+}
+
+.custom-navbar .btn-warning:hover {
+  background-color: #ff4757;
+}

@@ -1,0 +1,57 @@
+<div class="orders-container">
+
+  <h2>All Orders</h2>
+
+  <div class="summary-card">
+    Total Orders: {{ orders.length }}
+    <span class="revenue">
+      Total Revenue: ₹{{ totalRevenue }}
+    </span>
+  </div>
+
+  <table *ngIf="orders.length > 0">
+    <thead>
+      <tr>
+        <th>Order ID</th>
+        <th>Product</th>
+        <th>Buyer</th>
+        <th>Email</th>
+        <th>Phone</th>
+        <th>Qty</th>
+        <th>Price</th>
+        <th>Total</th>
+        <th>Status</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let order of orders">
+        <td>#{{ order.orderId }}</td>
+        <td>{{ order.productName }}</td>
+        <td>{{ order.buyerName }}</td>
+        <td>{{ order.buyerEmail }}</td>
+        <td>{{ order.buyerPhone }}</td>
+        <td>{{ order.quantity }}</td>
+        <td>₹{{ order.price }}</td>
+        <td class="total">₹{{ order.totalAmount }}</td>
+        <td>
+          <select [(ngModel)]="order.status" (change)="updateStatus(order.orderId, order.status)" [disabled]="order.status === 'CANCELLED'">
+            <option value="CONFIRMED">Confirmed</option>
+            <option value="SHIPPED">Shipped</option>
+            <option value="DELIVERED">Delivered</option>
+            <option value="CANCELLED" *ngIf="order.status === 'CANCELLED'">Cancelled</option>
+          </select>
+        </td>
+        <td>
+          <button class="update-btn" (click)="updateStatus(order.orderId, order.status)" [disabled]="order.status === 'CANCELLED'">Update</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div *ngIf="orders.length === 0" class="no-orders">
+    No orders yet.
+  </div>
+
+</div>

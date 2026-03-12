@@ -1,0 +1,59 @@
+<div class="cart-container">
+
+  <h2>🛒 My Cart</h2>
+
+  <div *ngFor="let item of cartItems" class="cart-item">
+
+    <!-- IMAGE -->
+    <div class="image-section">
+      <img
+        *ngIf="item.imageName"
+        [src]="'/uploads/' + item.imageName"
+      />
+    </div>
+
+    <!-- INFO -->
+    <div class="info-section">
+
+      <h4>{{ item.productName }}</h4>
+      <!-- <p class="price">₹ {{ item.price }}</p> -->
+
+      <div class="price-section">
+  <span class="mrp">₹ {{ item.mrp }}</span>
+  <span class="price">₹ {{ item.price }}</span>
+  <span class="discount">{{ item.discount }}% OFF</span>
+</div>
+      <!-- QUANTITY -->
+      <div class="qty-controls">
+        <button (click)="decrease(item)">−</button>
+        <span>{{ item.quantity }}</span>
+        <button (click)="increase(item)">+</button>
+      </div>
+
+      <!-- ACTION BUTTONS -->
+      <div class="action-buttons">
+
+       
+
+        <button class="delete-btn"
+                (click)="remove(item.cartItemId)">
+          Delete
+        </button>
+
+        <button class="buy-btn"
+                (click)="buyNow(item)">
+          Buy Now
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- TOTAL SECTION -->
+  <div class="cart-summary" *ngIf="cartItems.length > 0">
+    <h3>Total: ₹ {{ totalAmount }}</h3>
+  </div>
+
+</div>

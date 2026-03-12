@@ -1,0 +1,148 @@
+/* Background */
+.login-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 380px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Title */
+.login-card h1 {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 25px;
+}
+
+/* Inputs */
+.login-card input {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  transition: 0.3s ease;
+}
+
+.login-card input:focus {
+  border-color: #764ba2;
+  box-shadow: 0 0 10px rgba(118, 75, 162, 0.3);
+  outline: none;
+}
+
+/* Password container */
+.password-container {
+  position: relative;
+}
+
+.password-container i {
+  position: absolute;
+  right: 15px;
+  top: 12px;
+  cursor: pointer;
+  color: #777;
+  font-size: 18px;
+}
+
+.password-container i:hover {
+  color: #764ba2;
+}
+
+/* Forgot Password Styling */
+.forgot {
+  text-align: right;
+  margin-bottom: 18px;
+}
+
+.forgot a {
+  font-size: 15px;         
+  font-weight: 600;        
+  color: #6a11cb;          
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.forgot a:hover {
+  color: #ee0979;           
+  text-decoration: underline;
+}
+
+/* Login Button */
+.login-btn {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(238, 9, 121, 0.4);
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  transform: scale(1.03);
+  background: linear-gradient(90deg, #ee0979, #ff6a00);
+}
+
+/* Divider */
+.divider {
+  margin: 18px 0;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Register Button */
+.register-btn {
+  width: 100%;
+  padding: 13px;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 2px solid #764ba2;
+  background: transparent;
+  color: #764ba2;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: #764ba2;
+  color: white;
+  transform: scale(1.03);
+}
+
+.login-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+
+.app-title {
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+

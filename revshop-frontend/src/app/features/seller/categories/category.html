@@ -1,0 +1,45 @@
+<h1>Manage Categories</h1>
+
+<div class="form-card">
+  <input
+  type="text"
+  [(ngModel)]="newCategory.categoryName"
+  placeholder="Category Name"
+/>
+
+<input
+  type="text"
+  [(ngModel)]="newCategory.description"
+  placeholder="Description"
+/>
+  <button (click)="saveCategory()">
+    {{ editMode ? 'Update Category' : 'Add Category' }}
+  </button>
+
+  <button *ngIf="editMode" class="cancel" (click)="resetForm()">
+    Cancel
+  </button>
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let category of categories">
+      <td>{{ category.categoryId }}</td>
+      <td>{{ category.categoryName }}</td>
+      <td>{{ category.description }}</td>
+      <td>
+        <button class="edit" (click)="editCategory(category)">Edit</button>
+        <button class="delete" (click)="deleteCategory(category.categoryId)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

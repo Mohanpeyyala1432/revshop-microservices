@@ -1,0 +1,177 @@
+h1 {
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.card {
+  padding: 30px;
+  border-radius: 15px;
+  color: white;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.products-card {
+  background: linear-gradient(135deg, #4e73df, #224abe);
+}
+
+.lowstock-card {
+  background: linear-gradient(135deg, #e74a3b, #c0392b);
+}
+
+
+.orders-card {
+  background: linear-gradient(135deg, #1cc88a, #17a673);
+}
+
+.notifications-card {
+  background: linear-gradient(135deg, #f6ad55, #ed8936);
+  cursor: pointer;
+}
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  opacity: 0.9;
+}
+
+.card h2 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.low-stock-section {
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #fff1f2, #ffe4e6);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.alert-header {
+  font-size: 20px;
+  font-weight: 600;
+  color: #b91c1c;
+  margin-bottom: 15px;
+}
+
+.low-stock-card {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 12px;
+  border-left: 5px solid #ef4444;
+  transition: 0.3s ease;
+}
+
+.low-stock-card:hover {
+  transform: translateX(5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.alert-icon {
+  font-size: 24px;
+  color: #ef4444;
+}
+
+.alert-content h4 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.alert-content p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.qty {
+  font-weight: 700;
+  color: #dc2626;
+  font-size: 16px;
+}
+
+.notification-dropdown {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  width: 350px;
+  max-height: 500px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  z-index: 1000;
+  overflow-y: auto;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.notification-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.notification-header button {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  color: #666;
+}
+
+.notification-item {
+  padding: 15px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+}
+
+.notification-item:hover {
+  background: #f9f9f9;
+}
+
+.notification-item.unread {
+  background: #eff6ff;
+  border-left: 3px solid #3b82f6;
+}
+
+.notification-item p {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.notification-item small {
+  color: #999;
+  font-size: 12px;
+}
+
+.no-notifications {
+  padding: 30px;
+  text-align: center;
+  color: #999;
+}

@@ -1,0 +1,143 @@
+/*  CONTAINER */
+
+.checkout-container {
+  max-width: 650px;
+  margin: 50px auto;
+  padding: 40px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #333;
+}
+
+/*  FORM GROUP  */
+
+.form-group {
+  margin-bottom: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+.form-group textarea,
+.form-group select,
+.card-section input {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.form-group textarea {
+  resize: none;
+  height: 80px;
+}
+
+.form-group textarea:focus,
+.form-group select:focus,
+.card-section input:focus {
+  outline: none;
+  border-color: #4c4cd6;
+  box-shadow: 0 0 0 3px rgba(76, 76, 214, 0.1);
+}
+
+/*  CARD SECTION  */
+
+.card-section {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 15px;
+  background: #f8f9ff;
+  border-radius: 12px;
+}
+
+/*  BUTTON  */
+
+.checkout-container button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #4c4cd6, #6a6afc);
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-top: 20px;
+}
+
+.checkout-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(76, 76, 214, 0.3);
+}
+
+/*  RESPONSIVE  */
+
+@media (max-width: 768px) {
+  .checkout-container {
+    margin: 20px;
+    padding: 25px;
+  }
+}
+
+/* Center full screen */
+.success-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+}
+
+/* Green success card */
+.success-box {
+  background: #e8f5e9;
+  border: 2px solid #4caf50;
+  padding: 40px 60px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.success-box h2 {
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.success-box p {
+  color: #388e3c;
+  font-size: 16px;
+}
+
+.success-icon {
+  font-size: 50px;
+  margin-bottom: 15px;
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

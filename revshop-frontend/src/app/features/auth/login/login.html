@@ -1,0 +1,57 @@
+
+<div class="login-wrapper">
+
+  <div class="app-title">
+  RevShop 🛒
+</div>
+
+
+
+  <div class="login-card">
+
+    <h1>Welcome</h1>
+    <p class="subtitle">Login to continue to RevShop</p>
+
+    <form (ngSubmit)="onLogin()">
+
+      <input
+        type="email"
+        placeholder="Email Address"
+        [(ngModel)]="email"
+        name="email"
+        required
+      />
+<div class="password-container">
+  <input
+    [type]="hidePassword ? 'password' : 'text'"
+    class="form-control custom-input"
+    placeholder="Password"
+    [(ngModel)]="password"
+    name="password"
+    required>
+
+  <i class="bi"
+     [ngClass]="hidePassword ? 'bi-eye-slash' : 'bi-eye'"
+     (click)="hidePassword = !hidePassword">
+  </i>
+</div>
+
+      <div class="forgot">
+        <a routerLink="/forgot-password">Forgot Password?</a>
+      </div>
+
+      <button type="submit" class="login-btn">
+        Login
+      </button>
+
+    </form>
+
+    <div class="divider">OR</div>
+
+    <button class="register-btn" routerLink="/register">
+      Create New Account
+    </button>
+
+  </div>
+
+</div>

@@ -1,0 +1,107 @@
+<div class="orders-container">
+
+  <h2>📦 My Orders</h2>
+
+  <div *ngIf="orders.length === 0" class="empty">
+    No orders found.
+  </div>
+
+  <div class="order-card" *ngFor="let order of orders">
+
+    <div class="order-header">
+      <div>
+        <strong>Order ID:</strong> {{ order.orderId }}
+      </div>
+      <div class="status"
+           [ngClass]="{
+             'pending': order.status === 'PENDING',
+             'delivered': order.status === 'DELIVERED'
+           }">
+        {{ order.status }}
+      </div>
+    </div>
+
+    <div class="addresses">
+      <p><strong>Shipping:</strong> {{ order.shippingAddress }}</p>
+      <p><strong>Billing:</strong> {{ order.billingAddress }}</p>
+    </div>
+
+    <div class="items">
+      <!-- <div class="item-row" *ngFor="let item of order.items">
+        <span>{{ item.productName }}</span>
+        <span>₹ {{ item.price }}</span>
+        <span>Qty: {{ item.quantity }}</span>
+      </div> -->
+
+      <div class="item-row" *ngFor="let item of order.items">
+
+  <!-- Product Image -->
+  <img *ngIf="item.imageName"
+       [src]="'/uploads/' + item.imageName"
+       class="order-img"
+       alt="Product Image" />
+
+  <div class="item-details">
+    <span class="product-name">{{ item.productName }}</span>
+    <span>₹ {{ item.price }}</span>
+    <span>Qty: {{ item.quantity }}</span>
+  </div>
+
+  <!-- If already reviewed -->
+<div *ngIf="reviewedProducts[item.productId]"
+     class="already-reviewed">
+  ✅ Review already submitted
+</div>
+
+<!-- If not reviewed -->
+<button *ngIf="!reviewedProducts[item.productId]"
+        class="review-btn"
+        (click)="openReview(item.productId)">
+  ⭐ Add Review
+</button>
+
+  <!-- Review Form -->
+  <div *ngIf="selectedProductId === item.productId"
+       class="review-box">
+
+    <label>Rating</label>
+    <select [(ngModel)]="rating">
+      <option *ngFor="let r of [1,2,3,4,5]" [value]="r">
+        {{ r }} ⭐
+      </option>
+    </select>
+
+    <textarea
+      placeholder="Write your review..."
+      [(ngModel)]="comment">
+    </textarea>
+
+    <button (click)="submitReview(item.productId)">
+      Submit
+    </button>
+
+    <div *ngIf="reviewSuccess" class="success-msg">
+      ✅ Review submitted!
+    </div>
+
+  </div>
+
+</div>
+    </div>
+
+    <div class="order-footer">
+      <strong>Total: ₹ {{ order.totalAmount }}</strong>
+      <div *ngIf="order.paymentMethod" class="payment-info">
+        <p><strong>Payment:</strong> {{ order.paymentMethod }}</p>
+        <p *ngIf="order.transactionId"><strong>Transaction ID:</strong> {{ order.transactionId }}</p>
+      </div>
+      <button *ngIf="order.status === 'CONFIRMED' || order.status === 'PENDING'" 
+              class="cancel-btn" 
+              (click)="cancelOrder(order.orderId)">
+        Cancel Order
+      </button>
+    </div>
+
+  </div>
+
+</div>

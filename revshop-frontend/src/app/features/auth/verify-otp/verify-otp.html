@@ -1,0 +1,42 @@
+<div class="otp-wrapper">
+
+  <div class="otp-card">
+
+    <h2>Verify OTP</h2>
+    <p class="subtitle">
+      Enter the OTP sent to <strong>{{ email }}</strong>
+    </p>
+
+    <form (ngSubmit)="verifyOtp()">
+
+      <input type="text"
+             class="otp-input"
+             placeholder="Enter OTP"
+             [(ngModel)]="otp"
+             name="otp"
+             maxlength="6"
+             required>
+
+      <button type="submit"
+              class="btn-verify"
+              [disabled]="isLoading">
+        {{ isLoading ? 'Verifying...' : 'Verify OTP' }}
+      </button>
+
+    </form>
+
+    <div class="resend-section">
+      <span *ngIf="countdown > 0">
+        Resend OTP in <b>{{ countdown }}s</b>
+      </span>
+
+      <button *ngIf="countdown === 0"
+              class="btn-resend"
+              (click)="resendOtp()">
+        Resend OTP
+      </button>
+    </div>
+
+  </div>
+
+</div>

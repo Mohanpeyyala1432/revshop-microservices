@@ -1,0 +1,98 @@
+.orders-container {
+  padding: 25px;
+  background: #f4f6f9;
+  min-height: 100vh;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.summary-card {
+  background: white;
+  padding: 15px 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  font-weight: 600;
+}
+
+.revenue {
+  float: right;
+  color: #2f80ed;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+thead {
+  background: #1f2d3d;
+  color: white;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+tbody tr:hover {
+  background: #f9fafc;
+}
+
+.total {
+  font-weight: 600;
+  color: #27ae60;
+}
+
+.no-orders {
+  margin-top: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+select {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+select:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.update-btn {
+  background: #2f80ed;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.update-btn:hover {
+  background: #1e6fd1;
+}
+
+.update-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+

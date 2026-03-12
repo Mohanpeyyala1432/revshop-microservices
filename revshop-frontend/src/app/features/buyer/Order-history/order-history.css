@@ -1,0 +1,141 @@
+.orders-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.order-card {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.order-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.delivered {
+  background: #d4edda;
+  color: #155724;
+}
+
+.addresses {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.items {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.order-footer {
+  text-align: right;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.payment-info {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
+  font-size: 14px;
+  color: #666;
+}
+
+.payment-info p {
+  margin: 5px 0;
+}
+
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.order-img {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #f4f4f4;
+  padding: 4px;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.product-name {
+  font-weight: 600;
+}
+
+.review-btn {
+  background: #ff9900;
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+}
+
+.review-box {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f5f5f5;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.review-box textarea {
+  resize: none;
+  height: 60px;
+}
+
+.success-msg {
+  color: green;
+  font-weight: bold;
+}
+
+.cancel-btn {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.cancel-btn:hover {
+  background: #b91c1c;
+}
