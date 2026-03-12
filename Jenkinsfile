@@ -21,7 +21,7 @@ pipeline {
                     for (service in services) {
                         echo "Building ${service}..."
                         dir(service) {
-                            sh 'mvn clean package -DskipTests'
+                            bat 'mvn clean package -DskipTests'
                         }
                     }
                 }
@@ -35,7 +35,7 @@ pipeline {
                     for (service in services) {
                         echo "Building ${service}..."
                         dir(service) {
-                            sh 'mvn clean package -DskipTests'
+                            bat 'mvn clean package -DskipTests'
                         }
                     }
                 }
@@ -48,7 +48,7 @@ pipeline {
                     // Use the existing sonar scanner tool defined in Jenkins global config
                     withSonarQubeEnv('SonarQube') {
                         // Scan using the root sonar-project.properties
-                        sh 'mvn sonar:sonar'
+                        bat 'mvn sonar:sonar'
                     }
                 }
             }
@@ -58,7 +58,7 @@ pipeline {
             steps {
                 script {
                     echo "Building Docker images using docker-compose..."
-                    sh 'docker-compose build'
+                    bat 'docker-compose build'
                 }
             }
         }
