@@ -1,6 +1,0 @@
-C:\revshop_microservices\microservices\api-gateway\src\main\java\com\revshop\gateway\util\JwtUtil.java
-C:\revshop_microservices\microservices\api-gateway\src\main\java\com\revshop\gateway\config\RateLimitConfig.java
-C:\revshop_microservices\microservices\api-gateway\src\main\java\com\revshop\gateway\ApiGatewayApplication.java
-C:\revshop_microservices\microservices\api-gateway\src\main\java\com\revshop\gateway\filter\JwtAuthenticationFilter.java
-C:\revshop_microservices\microservices\api-gateway\src\main\java\com\revshop\gateway\config\RateLimiterConfiguration.java
-C:\revshop_microservices\microservices\api-gateway\src\main\java\com\revshop\gateway\filter\RateLimitingFilter.java

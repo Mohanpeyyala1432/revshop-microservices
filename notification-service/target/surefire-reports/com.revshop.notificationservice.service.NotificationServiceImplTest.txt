@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.revshop.notificationservice.service.NotificationServiceImplTest
--------------------------------------------------------------------------------
-Tests run: 6, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.820 s -- in com.revshop.notificationservice.service.NotificationServiceImplTest

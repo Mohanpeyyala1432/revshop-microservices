@@ -1,8 +1,0 @@
-com\revshop\notificationservice\repository\NotificationRepository.class
-com\revshop\notificationservice\controller\BuyerNotificationController.class
-com\revshop\notificationservice\exception\GlobalExceptionHandler.class
-com\revshop\notificationservice\model\Notification.class
-com\revshop\notificationservice\config\SwaggerConfig.class
-com\revshop\notificationservice\controller\NotificationController.class
-com\revshop\notificationservice\service\NotificationServiceImpl.class
-com\revshop\notificationservice\NotificationServiceApplication.class

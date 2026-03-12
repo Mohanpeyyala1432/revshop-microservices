@@ -1,0 +1,6 @@
+CREATE DATABASE IF NOT EXISTS revshop_user_db;
+CREATE DATABASE IF NOT EXISTS revshop_product_db;
+CREATE DATABASE IF NOT EXISTS revshop_cart_db;
+CREATE DATABASE IF NOT EXISTS revshop_order_db;
+CREATE DATABASE IF NOT EXISTS revshop_payment_db;
+CREATE DATABASE IF NOT EXISTS revshop_notification_db;
