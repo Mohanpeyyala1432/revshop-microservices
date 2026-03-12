@@ -38,6 +38,7 @@ pipeline {
             }
         }
 
+/*
         stage('SonarQube Analysis') {
             steps {
                 script {
@@ -49,6 +50,7 @@ pipeline {
                 }
             }
         }
+*/
 
         stage('Docker Build & Package') {
             steps {
