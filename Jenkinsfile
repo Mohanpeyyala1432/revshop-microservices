@@ -38,6 +38,16 @@ pipeline {
             }
         }
 
+        stage('Build Frontend') {
+            steps {
+                echo "Building Frontend..."
+                dir('revshop-frontend') {
+                    bat 'npm install'
+                    bat 'npm run build'
+                }
+            }
+        }
+
 /*
         stage('SonarQube Analysis') {
             steps {
