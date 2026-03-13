@@ -66,7 +66,7 @@ pipeline {
             steps {
                 script {
                     def allServices = [
-                        'revshop-mysql', 'eureka-server', 'config-server', 
+                        'eureka-server', 'config-server', 
                         'api-gateway', 'user-service', 'product-service', 
                         'cart-service', 'order-service', 'payment-service', 
                         'notification-service', 'revshop-frontend'
