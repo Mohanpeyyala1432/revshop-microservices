@@ -65,8 +65,17 @@ pipeline {
         stage('Docker Build & Package') {
             steps {
                 script {
-                    echo "Building Docker images using docker-compose..."
-                    bat 'docker-compose build'
+                    def allServices = [
+                        'revshop-mysql', 'eureka-server', 'config-server', 
+                        'api-gateway', 'user-service', 'product-service', 
+                        'cart-service', 'order-service', 'payment-service', 
+                        'notification-service', 'revshop-frontend'
+                    ]
+                    echo "Building Docker images one by one to save memory..."
+                    for (service in allServices) {
+                        echo "Building image for ${service}..."
+                        bat "docker-compose build ${service}"
+                    }
                 }
             }
         }
