@@ -20,3 +20,6 @@ sonar_error*.txt
 # OS
 .DS_Store
 Thumbs.db
+uploads/  
+*.log  
+out.txt 
