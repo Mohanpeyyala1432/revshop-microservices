@@ -13,11 +13,11 @@ public class NotificationServiceImpl {
     @Autowired
     private NotificationRepository notificationRepository;
     
-    public Notification createNotification(Notification notification) {
+    public Notification createNotification(Notification notification) { //create notification
         return notificationRepository.save(notification);
     }
     
-    public List<Notification> getNotificationsByUserId(Long userId) {
+    public List<Notification> getNotificationsByUserId(Long userId) { //get
         return notificationRepository.findByUserId(userId);
     }
 
@@ -25,14 +25,14 @@ public class NotificationServiceImpl {
         return notificationRepository.findByUserId(userId);
     }
 
-    public void markAsRead(Long id) {
+    public void markAsRead(Long id) { //read
         Notification notification = notificationRepository.findById(id)
             .orElseThrow(() -> new RuntimeException("Notification not found"));
         notification.setReadStatus(true);
         notificationRepository.save(notification);
     }
 
-    public void createNotification(Long userId, String message) {
+    public void createNotification(Long userId, String message) {//create
         Notification notification = new Notification();
         notification.setUserId(userId);
         notification.setMessage(message);

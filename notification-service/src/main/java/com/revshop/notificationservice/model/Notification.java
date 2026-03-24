@@ -4,10 +4,11 @@ import jakarta.persistence.*;
 import lombok.Data;
 import java.time.LocalDateTime;
 
+// to table
 @Entity
 @Table(name = "notifications")
 @Data
-public class Notification {
+public class Notification { // to table
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
