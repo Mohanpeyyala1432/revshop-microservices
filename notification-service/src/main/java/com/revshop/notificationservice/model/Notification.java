@@ -10,14 +10,15 @@ import java.time.LocalDateTime;
 @Data
 public class Notification { // to table
 
+    //table col
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     private String message;
-    private boolean readStatus = false;
+    private boolean readStatus  =  false;
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @Column(name = "user_id")
+    @Column( name = "user_id")
     private Long userId;
 }

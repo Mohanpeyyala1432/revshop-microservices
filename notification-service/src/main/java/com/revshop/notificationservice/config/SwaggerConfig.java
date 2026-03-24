@@ -7,13 +7,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import java.util.List;
 
-//configuration API
+//configuration A P I
 @Configuration
 public class SwaggerConfig {
     @Bean
     public OpenAPI notificationServiceAPI() {
         return new OpenAPI()
                 .info(new Info().title("Notification Service API").version("1.0") )
-                .servers(List.of(new Server().url("http://localhost:9096") ) ); // swagger
+                .servers(List.of( new Server().url("http://localhost:9096") ) ); // swaggerr
     }
 }
