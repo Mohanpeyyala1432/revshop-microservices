@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
+//added by vijay
 @Service
 public class NotificationServiceImpl {
     
@@ -30,7 +31,7 @@ public class NotificationServiceImpl {
         notification.setReadStatus(true);
         notificationRepository.save(notification);
     }
-    
+
     public void createNotification(Long userId, String message) {
         Notification notification = new Notification();
         notification.setUserId(userId);
